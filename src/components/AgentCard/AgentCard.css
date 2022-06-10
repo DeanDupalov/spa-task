@@ -1,0 +1,29 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin: 1.2% 1%;
+    padding: 0.5em ;
+    box-shadow: 0 0 1em 0.1em rgba(0,0,0,0.2);
+    
+ }
+
+ .card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+
+.parent{
+    position: relative;
+}
+.over-img{
+    position: absolute;
+    top: 85%;
+    left: 90%;
+    max-width: 20px;
+    max-height: 20px;
+}

@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+html {
+    box-sizing: border-box;
+}
+
+
+.basic-grid {
+    display: grid;
+    gap: 1rem;
+    margin: 0 3rem;
+
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+ }
+
+
+
+ .nav {
+    overflow: hidden;
+    background-color: #22B7E6;
+    margin-bottom: 50px;
+    padding: 20px 35px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  /* .nav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  } */
+  
+  
+  
+  .nav .search-container {
+    float: right;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .nav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
   }
-}
+  
+  .nav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: white;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav .search-container button:hover {
+    background: rgb(248, 246, 246);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .nav .search-container {
+      float: none;
+    }
+    .nav input[type=text], .nav .search-container button {
+      float: none;
+      display: inline-block;
+      text-align: left;
+      width: auto;
+      margin: 0;
+      padding: 14px;
+    }
+    .nav input[type=text] {
+      border: 1px solid #ccc;  
+    }
+  }
